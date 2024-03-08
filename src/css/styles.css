@@ -8,6 +8,7 @@ body {
   min-width: 320px;
   font-family: "Alumni Sans", sans-serif;
   background-color: #0a0a0a;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -248,7 +249,7 @@ main {
 }
 .burger span {
   height: 2px;
-  width: 100%;
+  width: 80%;
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
           transform: scale(1);
@@ -810,7 +811,7 @@ input[type=radio] {
     left: 0;
     right: 0;
     z-index: 50;
-    overflow-y: auto;
+    overflow: hidden;
     padding: 50px 40px;
     background-color: #0a0a0a;
     -webkit-animation: burgerAnimation 0.5s;

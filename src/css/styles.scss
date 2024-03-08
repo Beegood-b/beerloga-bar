@@ -16,6 +16,7 @@ body {
   min-width: 320px;
   font-family: "Alumni Sans", sans-serif;
   background-color: $bg-color;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -210,7 +211,7 @@ main {
 
   span {
     height: 2px;
-    width: 100%;
+    width: 80%;
     transform: scale(1);
     background-color: $text-color;
   }
@@ -700,7 +701,7 @@ input[type="radio"] {
     left: 0;
     right: 0;
     z-index: 50;
-    overflow-y: auto;
+    overflow: hidden;
     padding: 50px 40px;
     background-color: $bg-color;
     animation: burgerAnimation 0.5s;
