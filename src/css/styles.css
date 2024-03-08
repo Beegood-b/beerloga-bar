@@ -59,6 +59,24 @@ main {
   border-radius: 8px;
 }
 
+.cursor {
+  position: fixed;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  -webkit-box-shadow: 0 0 10px #957d4f;
+          box-shadow: 0 0 10px #957d4f;
+  top: -10rem;
+  left: -10rem;
+  height: 30px;
+  width: 30px;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  z-index: 999;
+}
+
 .loader {
   position: fixed;
   display: -webkit-box;
@@ -286,7 +304,6 @@ main {
   width: 100%;
   height: 550px;
   margin-bottom: 2rem;
-  opacity: 0.4;
 }
 .video video {
   -webkit-filter: grayscale(100%);
@@ -296,6 +313,7 @@ main {
   height: auto;
   top: 50%;
   left: 50%;
+  opacity: 0.4;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -315,7 +333,7 @@ main {
   position: relative;
   display: inline-block;
   color: #fff;
-  font-size: 3em;
+  font-size: clamp(2.25rem, 2.0357rem + 1.0714vw, 3.75rem);
   text-transform: uppercase;
   -webkit-animation: fade-down 1s 0.5s backwards;
           animation: fade-down 1s 0.5s backwards;

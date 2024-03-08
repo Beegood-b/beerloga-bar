@@ -19,6 +19,8 @@ body {
   scroll-behavior: smooth;
 }
 
+
+
 *,
 h1,
 h2,
@@ -62,6 +64,22 @@ main {
   background: linear-gradient(to bottom, #0a0a0a, #957c4f7a);
   box-shadow: 0 0 2px rgba(255, 255, 255, 0.1) inset;
   border-radius: 8px;
+}
+
+// ==================== CURSOR ====================
+
+.cursor {
+  position: fixed;
+  border: 2px solid $white;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: 0 0 10px $text-color;
+  top: -10rem;
+  left: -10rem;
+  height: 30px;
+  width: 30px;
+  transition: transform .2s;
+  z-index: 999;
 }
 
 // ==================== LOADER ====================
@@ -245,7 +263,6 @@ main {
   width: 100%;
   height: 550px;
   margin-bottom: 2rem;
-  opacity: 0.4;
 
   video {
     filter: grayscale(100%);
@@ -254,6 +271,7 @@ main {
     height: auto;
     top: 50%;
     left: 50%;
+    opacity: 0.4;
     transform: translate(-50%, -50%);
   }
 }
@@ -270,7 +288,7 @@ main {
     position: relative;
     display: inline-block;
     color: $white;
-    font-size: 3em;
+    font-size: clamp(2.25rem, 2.0357rem + 1.0714vw, 3.75rem);
     text-transform: uppercase;
     animation: fade-down 1s 0.5s backwards;
 

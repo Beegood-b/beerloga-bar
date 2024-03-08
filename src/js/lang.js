@@ -41,7 +41,7 @@ export function lang() {
     },
 
     // gallery page
-    galleryPage: { en: "GALLERY", ru: "ГАЛЕРЕЯ", lv: "GALERIJA" },
+    galleryPage: { en: "gallery", ru: "галлерея", lv: "galerija" },
     galleryText: {
       en: `"Small Glimpse into BEERloga"`,
       ru: `"Небольшой взгляд в BEERloga"`,
