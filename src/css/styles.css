@@ -926,6 +926,10 @@ input[type=radio] {
   .swiper-button-next {
     display: none;
   }
+  .swiper-button-prev .cursor,
+  .swiper-button-next .cursor {
+    display: none;
+  }
 }
 @media (max-width: 768px) and (max-width: 600px) {
   .swiper-slide img {

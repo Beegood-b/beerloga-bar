@@ -1,4 +1,3 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 // ==================== GENERAL RULES ====================
@@ -19,8 +18,6 @@ body {
   scroll-behavior: smooth;
 }
 
-
-
 *,
 h1,
 h2,
@@ -32,7 +29,6 @@ span,
 p {
   margin: 0;
   padding: 0;
-
   box-sizing: border-box;
   color: $text-color;
   font-weight: normal;
@@ -108,8 +104,13 @@ main {
   }
 
   @keyframes loading {
-    from { transform: rotate(0turn) }
-    to { transform: rotate(1turn) }
+    from {
+      transform: rotate(0turn)
+    }
+
+    to {
+      transform: rotate(1turn)
+    }
   }
 }
 
@@ -277,12 +278,12 @@ main {
 }
 
 .heading {
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   h1 {
     position: relative;
@@ -341,6 +342,7 @@ main {
     font-size: 20px;
     color: $bg-color;
   }
+
   &:hover {
     background-color: #957c4fac;
     transition: all ease 0.5s;
@@ -435,10 +437,10 @@ main {
   color: $text-color;
   user-select: none;
 
-    &:active {
-      outline: none;
-      box-shadow: none;
-    }
+  &:active {
+    outline: none;
+    box-shadow: none;
+  }
 }
 
 .swiper-pagination-bullet {
@@ -655,9 +657,9 @@ input[type="radio"] {
   transition: max-height 0.5s, padding 0.5s;
 }
 
-.accordion input[type="radio"]:checked + label + .map,
-.accordion input[type="radio"]:checked + label + .number,
-.accordion input[type="radio"]:checked + label + .social-media {
+.accordion input[type="radio"]:checked+label+.map,
+.accordion input[type="radio"]:checked+label+.number,
+.accordion input[type="radio"]:checked+label+.social-media {
   max-height: 600px;
   padding: 10px 0;
 }
@@ -749,6 +751,7 @@ input[type="radio"] {
     from {
       opacity: 0;
     }
+
     to {
       opacity: 1;
     }
@@ -780,9 +783,14 @@ input[type="radio"] {
 }
 
 @media (max-width: 768px) {
+
   .swiper-button-prev,
   .swiper-button-next {
     display: none;
+
+    .cursor {
+      display: none;
+    }
   }
 
   @media (max-width: 600px) {

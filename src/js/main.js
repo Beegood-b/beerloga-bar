@@ -19,18 +19,28 @@ document.addEventListener('mousemove', (e) => {
   const height = cursor.offsetHeight;
   const width = cursor.offsetWidth;
 
-  setTimeout(() => {
-    cursor.style.left = `${e.clientX - width / 2}px`;
-    cursor.style.top = `${e.clientY - height / 2}px`;
-  }, 100);
+  if (window.innerWidth > 992) {
+    setTimeout(() => {
+      cursor.style.left = `${e.clientX - width / 2}px`;
+      cursor.style.top = `${e.clientY - height / 2}px`;
+    }, 100);
+  }
+});
 
-  document.addEventListener('click', () => {
+document.addEventListener('click', () => {
+  const cursor = document.getElementById('cursor');
+  
+  if (window.innerWidth > 992) {
     cursor.style.transform = 'scale(.8)';
-  });
+  }
+});
 
-  cursor.addEventListener('transitionend', () => {
+document.getElementById('cursor').addEventListener('transitionend', () => {
+  const cursor = document.getElementById('cursor');
+  
+  if (window.innerWidth > 992) {
     cursor.style.transform = 'scale(1)';
-  });
+  }
 });
 
 
