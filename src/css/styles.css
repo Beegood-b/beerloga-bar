@@ -386,18 +386,24 @@ main {
           justify-content: center;
   height: 65px;
   width: 65px;
-  background-color: #957d4f;
+  background-color: #0a0a0a;
+  border: 2px solid #957d4f;
   border-radius: 50%;
   outline: none;
 }
 .btn-main i {
   font-size: 20px;
-  color: #0a0a0a;
+  color: #957d4f;
 }
 .btn-main:hover {
-  background-color: rgba(149, 124, 79, 0.6745098039);
+  background-color: rgba(149, 124, 79, 0.5568627451);
+  -webkit-box-shadow: 0 0 15px #957d4f;
+          box-shadow: 0 0 15px #957d4f;
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
+}
+.btn-main:hover i {
+  color: #0a0a0a;
 }
 
 .about {
