@@ -29,7 +29,7 @@ document.addEventListener('mousemove', (e) => {
 
 document.addEventListener('click', () => {
   const cursor = document.getElementById('cursor');
-  
+
   if (window.innerWidth > 992) {
     cursor.style.transform = 'scale(.8)';
   }
@@ -37,7 +37,7 @@ document.addEventListener('click', () => {
 
 document.getElementById('cursor').addEventListener('transitionend', () => {
   const cursor = document.getElementById('cursor');
-  
+
   if (window.innerWidth > 992) {
     cursor.style.transform = 'scale(1)';
   }
