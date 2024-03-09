@@ -45,6 +45,28 @@ document.getElementById('cursor').addEventListener('transitionend', () => {
   }
 });
 
+//radio button close contact page
+document.addEventListener("DOMContentLoaded", function () {
+  const radioButtons = document.querySelectorAll('input[type="radio"]');
+
+  radioButtons.forEach(function (radioButton) {
+    let lastChecked = null;
+
+    radioButton.addEventListener("click", function () {
+      // Check if the radio button is already checked
+      const isChecked = this.checked;
+
+      // If the radio button is already checked and it's not the same as the last checked one, uncheck it
+      if (isChecked && this !== lastChecked) {
+        lastChecked = this;
+      } else {
+        this.checked = false;
+        lastChecked = null;
+      }
+    });
+  });
+});
+
 
 
 
