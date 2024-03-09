@@ -9,8 +9,10 @@ document.querySelector(".burger").addEventListener("click", function () {
 
 // preloader
 window.addEventListener("load", () => {
-  const loader = document.querySelector('.loader');
-  loader.classList.add('loader--hidden');
+  setTimeout(() => {
+    const loader = document.querySelector('.loader');
+    loader.classList.add('loader--hidden');
+  }, 500);
 });
 
 //mouse effect

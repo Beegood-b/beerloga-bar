@@ -97,10 +97,10 @@ main {
     content: "";
     width: 50px;
     height: 50px;
-    border: 3px solid $bg-color;
+    border: 3px solid rgba(40, 40, 40, 0.3);
     border-top-color: $text-color;
     border-radius: 50%;
-    animation: loading 2s ease infinite
+    animation: loading 2s ease infinite;
   }
 
   @keyframes loading {
@@ -291,7 +291,7 @@ main {
     color: $white;
     font-size: clamp(2.25rem, 2.0357rem + 1.0714vw, 3.75rem);
     text-transform: uppercase;
-    animation: fade-down 1s 0.5s backwards;
+    animation: fade-down 1s 1.3s backwards;
 
     &:before,
     &:after {
@@ -345,7 +345,7 @@ main {
   }
 
   &:hover {
-    background-color: #957c4f8e;
+    background-color: #957c4fd2;
     box-shadow: 0 0 15px $text-color;
     transition: all ease 0.5s;
 
