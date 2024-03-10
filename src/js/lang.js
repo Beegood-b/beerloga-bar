@@ -66,23 +66,22 @@ export function setupLanguageSwitcher() {
       lv: "par mums",
     },
     "about-text": {
-      en: `Satisfy your hunger at BEERloga.
-    We've got delicious burgers paired with a fantastic selection of beers.
-    Come on in and ​treat yourself to a delicious meal that hits the spot.
-    Hungry for a ​great time?
-    BEERloga Bar is the place to be!`,
-      ru: `Утолите свой голод в BEERloga.
-      У нас вы найдете вкусные бургеры в сочетании с отличным выбором пива.
-      Загляните и насладитесь великолепным приемом пищи, который поднимет настроение.
-      Хотите отлично провести время?
-      BEERloga Bar - самое подходящее место!
+      en: `Satisfy your hunger at BEERloga
+We've got delicious burgers paired with a fantastic selection of beers
+Come on in and ​treat yourself to a delicious meal that hits the spot
+Hungry for a ​great time?
+BEERloga Bar is the place to be!`,
+      ru: `Утолите свой голод в BEERloga
+У нас вы найдете вкусные бургеры в сочетании с отличным выбором пива
+Загляните и насладитесь великолепным приемом пищи, который поднимет настроение
+Хотите отлично провести время?
+BEERloga Bar - самое подходящее место!
     `,
-      lv: `Piesātiet savu izsalkumu BEERloga.
-      Piedāvājam garšīgus burgerus un fantastisku alus izvēli.
-      Nāciet iekšā un ērti izbaudiet gardu maltīti, kas pilnībā apmierinās jūsu vēlmes.
-      Izsalkuši labu laiku?
-      BEERloga Bar ir vieta, kur jābūt!
-    `,
+      lv: `Piesātiet savu izsalkumu BEERloga
+Piedāvājam garšīgus burgerus un fantastisku alus izvēli
+Nāciet iekšā un ērti izbaudiet gardu maltīti,kas pilnībā apmierinās jūsu vēlmes
+Izsalkuši labu laiku?
+BEERloga Bar ir vieta, kur jābūt!`,
     },
   };
 
@@ -152,7 +151,7 @@ export function setupLanguageSwitcher() {
     },
     "gallery-heading": {
       en: "gallery",
-      ru: "галлерея",
+      ru: "галерея",
       lv: "galerija",
     },
     "gallery-text": {

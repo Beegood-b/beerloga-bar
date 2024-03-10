@@ -399,15 +399,6 @@ main {
 .about {
   padding-top: 2rem;
 }
-.about pre {
-  padding: 1.5rem 0;
-  color: #957d4f;
-  font-size: 25px;
-  text-align: center;
-  -webkit-animation: fade-up 1s 0.5s backwards;
-          animation: fade-up 1s 0.5s backwards;
-  font-family: "Alumni Sans", sans-serif;
-}
 
 .about-section {
   display: -webkit-box;
@@ -446,6 +437,29 @@ main {
 .about-image img {
   width: 100%;
   height: auto;
+}
+
+.about-text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.about-text-container pre {
+  padding: 1.5rem 0;
+  color: #957d4f;
+  font-size: 25px;
+  text-align: center;
+  -webkit-animation: fade-up 1s 0.5s backwards;
+          animation: fade-up 1s 0.5s backwards;
+  font-family: "Alumni Sans", sans-serif;
 }
 
 .bar-menu {
