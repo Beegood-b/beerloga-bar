@@ -29,7 +29,7 @@ p {
 }
 
 main {
-  margin-top: 6.2rem;
+  margin-top: 7rem;
 }
 
 .wrapper {
@@ -199,27 +199,6 @@ main {
   color: #957d4f;
 }
 
-.follow-us-burger {
-  display: none;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.social-media-title h6 {
-  font-size: 25px;
-  text-transform: uppercase;
-}
-
-.social-media-icons i {
-  padding: 0.5rem;
-  font-size: 25px;
-}
-
 .burger {
   display: none;
   position: relative;
@@ -296,6 +275,16 @@ main {
 
 .none {
   display: none;
+}
+
+.lang-select {
+  background: #0a0a0a;
+  color: #957d4f;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  width: 40px;
+  margin-left: 3rem;
 }
 
 .video {
@@ -409,13 +398,14 @@ main {
 .about {
   padding-top: 2rem;
 }
-.about p {
+.about pre {
   padding: 1.5rem 0;
   color: #957d4f;
   font-size: 25px;
   text-align: center;
   -webkit-animation: fade-up 1s 0.5s backwards;
           animation: fade-up 1s 0.5s backwards;
+  font-family: "Alumni Sans", sans-serif;
 }
 
 .about-section {
@@ -764,8 +754,8 @@ input[type=radio] {
   line-height: 20px;
   max-height: 0;
   overflow: hidden;
-  -webkit-transition: max-height 1s 0.3s, padding 1s 0.3s;
-  transition: max-height 1s 0.3s, padding 1s 0.3s;
+  -webkit-transition: max-height 1s, padding 1s;
+  transition: max-height 1s, padding 1s;
 }
 
 .accordion input[type=radio]:checked + label + .map,
@@ -853,10 +843,9 @@ input[type=radio] {
     margin-left: 0;
     margin-right: 0;
   }
-  .follow-us-burger {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .lang-select {
+    margin-left: 0.5rem;
+    margin-bottom: 2rem;
   }
   .swiper-button-prev,
   .swiper-button-next {
@@ -935,6 +924,10 @@ input[type=radio] {
   .swiper-button-prev .cursor,
   .swiper-button-next .cursor {
     display: none;
+  }
+  .swiper-button-prev .btn-main:hover,
+  .swiper-button-next .btn-main:hover {
+    pointer-events: none;
   }
 }
 @media (max-width: 768px) and (max-width: 600px) {

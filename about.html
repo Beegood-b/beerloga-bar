@@ -39,31 +39,27 @@
       <nav class="nav">
         <ul>
           <a href="index.html">
-            <li>HOME</li>
+            <li data-lang="nav-home"></li>
           </a>
           <a href="about.html">
-            <li class="focused">ABOUT</li>
+            <li class="focused" data-lang="nav-about"></li>
           </a>
           <a href="menu.html">
-            <li>MENU</li>
+            <li data-lang="nav-menu"></li>
           </a>
           <a href="gallery.html">
-            <li>GALLERY</li>
+            <li data-lang="nav-gallery"></li>
           </a>
           <a href="contact.html">
-            <li>CONTACT</li>
+            <li data-lang="nav-contact"></li>
           </a>
         </ul>
-        <div class="follow-us-burger">
-          <div class="social-media-title">
-            <h6>Follow Us</h6>
-          </div>
-          <div class="social-media-icons">
-            <a href="https://www.instagram.com/beerlogariga/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.facebook.com/Riga.BEERloga.pub" target="_blank"><i
-                class="fa-brands fa-facebook"></i></a>
-          </div>
-        </div>
+
+        <select id="langSelect" class="lang-select">
+          <option value="en">EN</option>
+          <option value="ru">RU</option>
+          <option value="lv">LV</option>
+        </select>
       </nav>
 
       <!-- burger -->
@@ -78,19 +74,13 @@
     <main class="about">
       <section class="about-section">
         <div class="about-title">
-          <h1>About Us</h1>
+          <h1 data-lang="about-heading"></h1>
         </div>
         <div class="about-image">
           <img src="./src/img/logo-big.png" alt="" />
         </div>
-        <p>
-          Satisfy your hunger at BEERloga.<br />
-          We've got delicious burgers paired with a fantastic
-          selection of beers.<br />
-          Come on in and ​treat yourself to a delicious meal that hits the
-          spot.<br />
-          Hungry for a ​great time?<br /> BEERloga Bar is the place to be!
-        </p>
+        <div class="about-text-container">
+          <pre style="white-space: pre-wrap; overflow-x: auto;" data-lang="about-text"></pre>
       </section>
 
       <div class="button animate__animated animate__fadeIn animate__delay-1s">

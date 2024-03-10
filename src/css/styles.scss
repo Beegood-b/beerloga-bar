@@ -35,7 +35,7 @@ p {
 }
 
 main {
-  margin-top: 6.2rem;
+  margin-top: 7rem;
 }
 
 // ==================== WRAPPER ====================
@@ -74,7 +74,7 @@ main {
   left: -10rem;
   height: 30px;
   width: 30px;
-  transition: transform .2s;
+  transition: transform 0.2s;
   z-index: 999;
 }
 
@@ -105,11 +105,11 @@ main {
 
   @keyframes loading {
     from {
-      transform: rotate(0turn)
+      transform: rotate(0turn);
     }
 
     to {
-      transform: rotate(1turn)
+      transform: rotate(1turn);
     }
   }
 }
@@ -169,21 +169,7 @@ main {
   }
 }
 
-.follow-us-burger {
-  display: none;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.social-media-title h6 {
-  font-size: 25px;
-  text-transform: uppercase;
-}
-
-.social-media-icons i {
-  padding: 0.5rem;
-  font-size: 25px;
-}
+// ==================== BURGER ====================
 
 .burger {
   display: none;
@@ -254,6 +240,18 @@ main {
 
 .none {
   display: none;
+}
+
+// ==================== LANG SELECT ====================
+
+.lang-select {
+  background: $bg-color;
+  color: $text-color;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  width: 40px;
+  margin-left: 3rem;
 }
 
 // ==================== MAIN PAGE ====================
@@ -360,12 +358,13 @@ main {
 .about {
   padding-top: 2rem;
 
-  p {
+  pre {
     padding: 1.5rem 0;
     color: $text-color;
     font-size: 25px;
     text-align: center;
     animation: fade-up 1s 0.5s backwards;
+    font-family: "Alumni Sans", sans-serif;
   }
 }
 
@@ -466,7 +465,6 @@ main {
 .swiper-slide.swiper-slide-prev {
   opacity: 0;
 }
-
 
 .swiper-slide img {
   height: 650px;
@@ -660,7 +658,7 @@ input[type="radio"] {
   line-height: 20px;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 1s .3s, padding 1s .3s;
+  transition: max-height 1s, padding 1s;
 }
 
 .accordion input[type="radio"]:checked+label+.map,
@@ -744,8 +742,9 @@ input[type="radio"] {
     }
   }
 
-  .follow-us-burger {
-    display: flex;
+  .lang-select {
+    margin-left: 0.5rem;
+    margin-bottom: 2rem;
   }
 
   .swiper-button-prev,
@@ -796,6 +795,10 @@ input[type="radio"] {
 
     .cursor {
       display: none;
+    }
+
+    .btn-main:hover {
+      pointer-events: none;
     }
   }
 

@@ -1,4 +1,7 @@
-import { swiper1, swiper2 } from './swipers.js'
+import { swiper1, swiper2 } from "./swipers.js";
+import { setupLanguageSwitcher } from "./lang.js";
+
+setupLanguageSwitcher();
 
 // burger menu
 document.querySelector(".burger").addEventListener("click", function () {
@@ -10,14 +13,14 @@ document.querySelector(".burger").addEventListener("click", function () {
 // preloader
 window.addEventListener("load", () => {
   setTimeout(() => {
-    const loader = document.querySelector('.loader');
-    loader.classList.add('loader--hidden');
+    const loader = document.querySelector(".loader");
+    loader.classList.add("loader--hidden");
   }, 500);
 });
 
 //mouse effect
-document.addEventListener('mousemove', (e) => {
-  const cursor = document.getElementById('cursor');
+document.addEventListener("mousemove", (e) => {
+  const cursor = document.getElementById("cursor");
   const height = cursor.offsetHeight;
   const width = cursor.offsetWidth;
 
@@ -29,19 +32,19 @@ document.addEventListener('mousemove', (e) => {
   }
 });
 
-document.addEventListener('click', () => {
-  const cursor = document.getElementById('cursor');
+document.addEventListener("click", () => {
+  const cursor = document.getElementById("cursor");
 
   if (window.innerWidth > 992) {
-    cursor.style.transform = 'scale(.8)';
+    cursor.style.transform = "scale(.8)";
   }
 });
 
-document.getElementById('cursor').addEventListener('transitionend', () => {
-  const cursor = document.getElementById('cursor');
+document.getElementById("cursor").addEventListener("transitionend", () => {
+  const cursor = document.getElementById("cursor");
 
   if (window.innerWidth > 992) {
-    cursor.style.transform = 'scale(1)';
+    cursor.style.transform = "scale(1)";
   }
 });
 
@@ -53,10 +56,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let lastChecked = null;
 
     radioButton.addEventListener("click", function () {
-      // Check if the radio button is already checked
+      // check if the radio button is already checked
       const isChecked = this.checked;
 
-      // If the radio button is already checked and it's not the same as the last checked one, uncheck it
+      // if the radio button is already checked and it's not the same as the last checked one, uncheck it
       if (isChecked && this !== lastChecked) {
         lastChecked = this;
       } else {
@@ -66,9 +69,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
-
-
-
-
-
