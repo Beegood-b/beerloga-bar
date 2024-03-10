@@ -119,8 +119,8 @@ export function setupLanguageSwitcher() {
     },
     "menu-text": {
       en: `"Order your happiness here"`,
-      ru: `"Закажи свое счастье здесь"`,
-      lv: `"Pasūti savu prieku šeit"`,
+      ru: `"Закажи свою улыбку здесь"`,
+      lv: `"Piegādā sev prieku un izbaudi to šeit"`,
     },
   };
 
@@ -158,7 +158,7 @@ export function setupLanguageSwitcher() {
     "gallery-text": {
       en: `"Small Glimpse into BEERloga"`,
       ru: `"Небольшой взгляд в BEERloga"`,
-      lv: `"Neliela iespēja ielūkoties BEERloga"`,
+      lv: `"Neliels ieskats BEERloga"`,
     },
   };
 
