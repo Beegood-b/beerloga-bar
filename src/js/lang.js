@@ -77,7 +77,7 @@ BEERloga Bar is the place to be!`,
 Хотите отлично провести время?
 BEERloga Bar - самое подходящее место!
     `,
-      lv: `Piesātiet savu izsalkumu BEERloga
+      lv: `Piesātiniet savu izsalkumu BEERloga
 Piedāvājam garšīgus burgerus un fantastisku alus izvēli
 Nāciet iekšā un ērti izbaudiet gardu maltīti,kas pilnībā apmierinās jūsu vēlmes
 Izsalkuši labu laiku?
