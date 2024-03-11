@@ -222,6 +222,93 @@ main {
   }
 }
 
+// ==================== DROPDOWN ====================
+
+.dropdown {
+  width: 4em;
+  position: relative;
+  margin: 2em;
+}
+
+.select {
+  background-color: #232323;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid $text-color;
+  border-radius: 0.5em;
+  padding: 1em;
+  cursor: pointer;
+  transition: background .3s;
+}
+
+.select-clicked {
+  border: 2px gray solid;
+  box-shadow: 0 0 0.8em wheat;
+}
+
+.select:hover {
+  background: #323741;
+}
+
+.caret {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #fff;
+  transition: .3s;
+  margin-left: 0.5rem;
+}
+
+.caret-rotate {
+  transform: rotate(180deg);
+}
+
+.menu {
+  background: #323741;
+  border: 1px #363a43 solid;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+  border-radius: 0.5em;
+  color: #9fa5b5;
+  position: absolute;
+  top: 3em;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%);
+  opacity: 0;
+  display: none;
+  transition: .2s;
+  z-index: 1;
+}
+
+.dropdown ul {
+  list-style: none;
+}
+
+.menu li {
+  padding: 0.7em 0.5em;
+  margin: 0.3em 0;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.menu li:hover {
+  background: #2a2d36;
+}
+
+.active {
+  background: #23242a;
+}
+
+.menu-open {
+  display: block;
+  opacity: 1;
+}
+
+// ==================== OTHER ====================
+
 .main {
   flex: 1 1 auto;
 }

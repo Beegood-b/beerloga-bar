@@ -46,6 +46,52 @@ document.getElementById("cursor").addEventListener("transitionend", () => {
   }
 });
 
+//dropdown menu
+const dropdowns = document.querySelectorAll('.dropdown');
+
+//loop through all dropdown elem
+dropdowns.forEach(dropdown => {
+  //get inner elem for each dropdown
+  const select = dropdown.querySelector('.select');
+  const caret = dropdown.querySelector('.caret');
+  const menu = dropdown.querySelector('.menu');
+  const options = dropdown.querySelectorAll('.menu li');
+  const selected = dropdown.querySelector('.selected');
+
+  select.addEventListener('click', () => {
+    //add the clicked select styles to the select elem
+    select.classList.toggle('select-clicked');
+    // add the rotate styles to the caret elem
+    caret.classList.toggle('caret-rotate');
+    //add the open styles to the menu elem
+    menu.classList.toggle('menu-open');
+  });
+
+  const arr = Array.from(options)
+
+  //loop through all option elements
+  arr.forEach(option => {
+    //add a click event to the option elem
+    option.addEventListener('click', () => {
+      //change selected inner text to clicked opt inner text
+      selected.innerText = option.innerText;
+      //add the clicked select styles to the select elem
+      select.classList.remove('select-clicked');
+      //add the rotate styles to the caret elem
+      caret.classList.remove('caret-rotate');
+      // add the open styles to the menu elem
+      menu.classList.remove('menu-open');
+      // remove active class from all option elems
+      options.forEach(option => {
+        option.classList.remove('active');
+      });
+
+      // add active class to clicked option elem
+      option.classList.add('active');
+    });
+  });
+});
+
 //radio button close contact page
 document.addEventListener("DOMContentLoaded", function () {
   const radioButtons = document.querySelectorAll('input[type="radio"]');
