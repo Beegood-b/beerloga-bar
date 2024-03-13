@@ -1,5 +1,6 @@
 import { swiper1, swiper2 } from "./swipers.js";
 import { setupLanguageSwitcher } from "./lang.js";
+setupLanguageSwitcher();
 
 // burger menu
 document.querySelector(".burger").addEventListener("click", function () {
@@ -114,4 +115,3 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-setupLanguageSwitcher();
