@@ -243,7 +243,6 @@ BEERloga Bar ir vieta, kur jābūt!`,
     currentLang = event.target.value;
     localStorage.setItem("language", event.target.value);
     changeLang();
-    checkActiveLangButton();
   });
 
   updateSelectedOption();
@@ -257,7 +256,6 @@ BEERloga Bar ir vieta, kur jābūt!`,
       }
     }
   }
-  changeLang();
 
   // checking lang of the browser
   function checkBrowserLang() {
@@ -270,3 +268,5 @@ BEERloga Bar ir vieta, kur jābūt!`,
     }
   }
 }
+changeLang();
+
