@@ -33,32 +33,38 @@
 
     <header class="header">
       <div class="logo">
-        <a href="./"><img src="./src/img/logo-big.png" width="60" alt="" /></a>
+        <a href="index.html"><img src="./src/img/logo-big.png" width="60" alt="" /></a>
       </div>
       <nav class="nav">
         <ul>
-          <a href="./">
+          <a href="index.html">
             <li class="focused" data-lang="nav-home"></li>
           </a>
-          <a href="./about">
+          <a href="about.html">
             <li data-lang="nav-about"></li>
           </a>
-          <a href="./menu">
+          <a href="menu.html">
             <li data-lang="nav-menu"></li>
           </a>
-          <a href="./gallery">
+          <a href="gallery.html">
             <li data-lang="nav-gallery"></li>
           </a>
-          <a href="./contact">
+          <a href="contact.html">
             <li data-lang="nav-contact"></li>
           </a>
         </ul>
 
-        <select id="langSelect" class="lang-select">
-          <option value="en">EN</option>
-          <option value="ru">RU</option>
-          <option value="lv">LV</option>
-        </select>
+        <div id="langSelect" class="dropdown">
+          <div class="select">
+            <span class="selected"></span>
+            <div class="caret"></div>
+          </div>
+          <ul class="menu">
+            <li data-value="lv"><img src="./src/img/lv.png" width="16px" alt=""></li>
+            <li data-value="en"><img src="./src/img/en.png" width="16px" alt=""></li>
+            <li data-value="ru"><img src="./src/img/ru.png" width="16px" alt=""></li>
+          </ul>
+        </div>
       </nav>
 
       <!-- burger -->

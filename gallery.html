@@ -95,11 +95,17 @@
             </a>
           </ul>
 
-          <select id="langSelect" class="lang-select">
-            <option value="en">EN</option>
-            <option value="ru">RU</option>
-            <option value="lv">LV</option>
-          </select>
+          <div id="langSelect" class="dropdown">
+            <div class="select">
+              <span class="selected"></span>
+              <div class="caret"></div>
+            </div>
+            <ul class="menu">
+              <li data-value="lv"><img src="./src/img/lv.png" width="16px" alt=""></li>
+              <li data-value="en"><img src="./src/img/en.png" width="16px" alt=""></li>
+              <li data-value="ru"><img src="./src/img/ru.png" width="16px" alt=""></li>
+            </ul>
+          </div>
         </nav>
 
         <!-- burger -->

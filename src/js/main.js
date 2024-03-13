@@ -1,6 +1,5 @@
 import { swiper1, swiper2 } from "./swipers.js";
 import { setupLanguageSwitcher } from "./lang.js";
-setupLanguageSwitcher();
 
 // burger menu
 document.querySelector(".burger").addEventListener("click", function () {
@@ -17,35 +16,42 @@ window.addEventListener("load", () => {
   }, 500);
 });
 
-//mouse effect
-document.addEventListener("mousemove", (e) => {
-  const cursor = document.getElementById("cursor");
-  const height = cursor.offsetHeight;
-  const width = cursor.offsetWidth;
+// check if the device has touch capability
+function isTouchDevice() {
+  return 'ontouchstart' in window || navigator.maxTouchPoints;
+}
 
-  if (window.innerWidth > 992) {
-    setTimeout(() => {
-      cursor.style.left = `${e.clientX - width / 2}px`;
-      cursor.style.top = `${e.clientY - height / 2}px`;
-    }, 100);
-  }
-});
+if (!isTouchDevice()) {
+  // apply mouse effect only if it's not a touchscreen device
+  document.addEventListener("mousemove", (e) => {
+    const cursor = document.getElementById("cursor");
+    const height = cursor.offsetHeight;
+    const width = cursor.offsetWidth;
 
-document.addEventListener("click", () => {
-  const cursor = document.getElementById("cursor");
+    if (window.innerWidth > 992) {
+      setTimeout(() => {
+        cursor.style.left = `${e.clientX - width / 2}px`;
+        cursor.style.top = `${e.clientY - height / 2}px`;
+      }, 100);
+    }
+  });
 
-  if (window.innerWidth > 992) {
-    cursor.style.transform = "scale(.8)";
-  }
-});
+  document.addEventListener("click", () => {
+    const cursor = document.getElementById("cursor");
 
-document.getElementById("cursor").addEventListener("transitionend", () => {
-  const cursor = document.getElementById("cursor");
+    if (window.innerWidth > 992) {
+      cursor.style.transform = "scale(.8)";
+    }
+  });
 
-  if (window.innerWidth > 992) {
-    cursor.style.transform = "scale(1)";
-  }
-});
+  document.getElementById("cursor").addEventListener("transitionend", () => {
+    const cursor = document.getElementById("cursor");
+
+    if (window.innerWidth > 992) {
+      cursor.style.transform = "scale(1)";
+    }
+  });
+}
 
 //dropdown menu
 const dropdowns = document.querySelectorAll('.dropdown');
@@ -115,3 +121,4 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+setupLanguageSwitcher();

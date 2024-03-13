@@ -1,9 +1,9 @@
 export function setupLanguageSwitcher() {
   const langSelect = document.getElementById("langSelect");
-  const allLangs = ["en", "ru", "lv"];
+  const allLangs = ["lv", "eng", "ru"];
   const currentPathName = window.location.pathname;
   let currentLang =
-    localStorage.getItem("language") || checkBrowserLang() || "en";
+    localStorage.getItem("language") || checkBrowserLang() || "lv";
   let currentTexts = {};
 
   const mainPage = {
@@ -202,6 +202,11 @@ BEERloga Bar ir vieta, kur jābūt!`,
       ru: "cвязаться с нами",
       lv: "sazināties ar mums",
     },
+    "contact-working-hours": {
+      en: "working hours",
+      ru: "рабочие часы",
+      lv: "darba laiks",
+    },
     "contact-follow": {
       en: "follow us",
       ru: "подписаться",
@@ -212,19 +217,19 @@ BEERloga Bar ir vieta, kur jābūt!`,
   // checking the path of the website page
   function checkPagePathName() {
     switch (currentPathName) {
-      case "/":
+      case "/index.html":
         currentTexts = mainPage;
         break;
-      case "/about":
+      case "/about.html":
         currentTexts = aboutPage;
         break;
-      case "/menu":
+      case "/menu.html":
         currentTexts = menuPage;
         break;
-      case "/gallery":
+      case "/gallery.html":
         currentTexts = galleryPage;
         break;
-      case "/contact":
+      case "/contact.html":
         currentTexts = contactPage;
         break;
 
@@ -236,13 +241,32 @@ BEERloga Bar ir vieta, kur jābūt!`,
   checkPagePathName();
 
   function updateSelectedOption() {
-    langSelect.value = currentLang;
+    const selectedElement = langSelect.querySelector('.selected');
+    selectedElement.textContent = ''; // clear any previous content
+
+    const img = document.createElement('img');
+    img.src = `./src/img/${currentLang}.png`;
+    img.width = 16;
+    img.alt = `${currentLang} flag`;
+    selectedElement.appendChild(img);
   }
 
-  langSelect.addEventListener("change", (event) => {
-    currentLang = event.target.value;
-    localStorage.setItem("language", event.target.value);
-    changeLang();
+  langSelect.addEventListener("click", (event) => {
+    const clickedElement = event.target;
+
+    // if clicked element is an image, get its parent (LI element)
+    const listItem = clickedElement.tagName === "IMG" ? clickedElement.parentNode : clickedElement;
+
+    if (listItem.tagName === "LI") {
+      const newLang = listItem.getAttribute("data-value");
+
+      if (newLang !== currentLang) {
+        currentLang = newLang;
+        localStorage.setItem("language", currentLang);
+        changeLang();
+        updateSelectedOption(); // update the selected language display after changing language
+      }
+    }
   });
 
   updateSelectedOption();
@@ -256,6 +280,7 @@ BEERloga Bar ir vieta, kur jābūt!`,
       }
     }
   }
+  changeLang();
 
   // checking lang of the browser
   function checkBrowserLang() {
@@ -268,5 +293,3 @@ BEERloga Bar ir vieta, kur jābūt!`,
     }
   }
 }
-changeLang();
-
