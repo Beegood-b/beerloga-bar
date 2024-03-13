@@ -212,19 +212,19 @@ BEERloga Bar ir vieta, kur jābūt!`,
   // checking the path of the website page
   function checkPagePathName() {
     switch (currentPathName) {
-      case "./":
+      case "/":
         currentTexts = mainPage;
         break;
-      case "./about":
+      case "/about":
         currentTexts = aboutPage;
         break;
-      case "./menu":
+      case "/menu":
         currentTexts = menuPage;
         break;
-      case "./gallery":
+      case "/gallery":
         currentTexts = galleryPage;
         break;
-      case "./contact":
+      case "/contact":
         currentTexts = contactPage;
         break;
 
