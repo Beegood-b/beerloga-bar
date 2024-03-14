@@ -10,6 +10,8 @@ html {
 $bg-color: #0a0a0a;
 $text-color: #957d4f;
 $white: #fff;
+$index: calc(1vw + 1vh);
+$transition: cubic-bezier(.1, .3, 0, 1);
 
 body {
   min-width: 320px;
@@ -44,6 +46,7 @@ main {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 // ==================== SCROLLBAR ====================
@@ -228,6 +231,7 @@ main {
 .dropdown {
   width: 4rem;
   position: relative;
+  margin-bottom: 1rem;
 
   span.selected {
     display: flex;
@@ -295,10 +299,6 @@ main {
   background: #957d4f;
 }
 
-.active {
-  background: #1c1c1c;
-}
-
 .menu-open {
   display: block;
   opacity: 1;
@@ -307,7 +307,7 @@ main {
 // ==================== OTHER ====================
 
 .main {
-  flex: 1 1 auto;
+  flex: 1 0 auto;
 }
 
 .open {
@@ -336,13 +336,12 @@ main {
   margin-bottom: 2rem;
 
   video {
-    filter: grayscale(100%);
+    filter: grayscale(1) brightness(.5);
     position: absolute;
     width: 100%;
     height: auto;
     top: 50%;
     left: 50%;
-    opacity: 0.4;
     transform: translate(-50%, -50%);
   }
 }
@@ -581,6 +580,105 @@ main {
   }
 }
 
+// ==================== ITEMS ====================
+
+.items-1,
+.items-2 {
+  display: flex;
+  gap: 0.5rem;
+  perspective: calc($index * 35);
+}
+
+.items-1,
+.items-2 {
+  margin: 3rem 1rem 2rem 1rem;
+}
+
+.item {
+  width: calc($index * 4);
+  height: calc($index * 16);
+  background-color: #fff;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  filter: grayscale(100%) brightness(.8);
+  transition: transform 1.25s $transition, filter 2s $transition, width 1.25s $transition;
+  will-change: transform, filter;
+  box-shadow: 0 0 5px $text-color;
+  border-radius: 10px;
+}
+
+.item::before,
+.item::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 20px;
+  right: calc($index * -1);
+}
+
+.item::after {
+  left: calc($index * -1);
+}
+
+// Right
+
+.items-1 .item:hover {
+  filter: inherit;
+  transform: translateZ(calc($index * 12));
+  z-index: 1;
+}
+
+.items-1 .item:hover+* {
+  filter: inherit;
+  transform: translateZ(calc($index * 10)) rotateY(30deg);
+  z-index: 2;
+}
+
+// Left 
+
+
+.items-1 .item:has(+ :hover) {
+  filter: inherit;
+  transform: translateZ(calc($index * 10)) rotateY(-30deg);
+}
+
+
+// ITEMS --- 2
+
+// Right
+
+.items-2 .item:hover {
+  filter: inherit;
+  transform: translateZ(calc($index * 12));
+  z-index: 1;
+}
+
+.items-2 .item:hover+* {
+  filter: inherit;
+  transform: translateZ(calc($index * 10)) rotateY(30deg);
+  z-index: 2;
+}
+
+// Left 
+
+
+.items-2 .item:has(+ :hover) {
+  filter: inherit;
+  transform: translateZ(calc($index * 10)) rotateY(-30deg);
+}
+
+.items-1 .item:active,
+.items-1 .item:focus,
+.items-2 .item:active,
+.items-2 .item:focus {
+  width: 16vw;
+  filter: inherit;
+  z-index: 100;
+  transform: translateZ(calc($index * 12));
+  margin: 0 .35vw;
+}
+
 // ==================== CONTACT ====================
 
 .contact-section {
@@ -768,6 +866,7 @@ input[type="radio"] {
 .footer {
   margin-top: auto;
   text-align: center;
+  flex: 0 0 auto;
 
   h6 {
     text-align: center;
@@ -794,13 +893,35 @@ input[type="radio"] {
 
 // ==================== MEDIA ====================
 
-@media (max-width: 992px) {
-  .burger {
-    display: flex;
+@media only screen and (max-device-width: 1366px) and (orientation: portrait) {
+
+  .items-1,
+  .items-2 {
+    display: none;
   }
 
-  ::-webkit-scrollbar {
-    display: none;
+  .swiper {
+    display: block;
+  }
+}
+
+@media only screen 
+  and (max-device-width: 1366px)
+  and (orientation: landscape) {
+
+    .items-1,
+    .items-2 {
+      display: none;
+    }
+  
+    .swiper {
+      display: block;
+    }
+  }
+
+@media only screen and (max-width: 992px) {
+  .burger {
+    display: flex;
   }
 
   .nav {
@@ -817,7 +938,7 @@ input[type="radio"] {
     z-index: 50;
     overflow: hidden;
     padding: 50px 40px;
-    background: linear-gradient(to bottom left, #000, #0a0a0a, #0d0d0d, #1a1a1a, );
+    background: linear-gradient(to left, #000, #0a0a0a, #0d0d0d, #1a1a1a, );
     animation: burgerAnimation 0.5s;
 
     ul {
@@ -843,11 +964,6 @@ input[type="radio"] {
   .accordion span:hover {
     transform: none;
     transition: none;
-  }
-
-  .lang-select {
-    margin-left: 0.5rem;
-    margin-bottom: 2rem;
   }
 
   .swiper-button-prev,
@@ -890,20 +1006,15 @@ input[type="radio"] {
   }
 }
 
-.swiper-button-prev,
-.swiper-button-next {
+.cursor {
   display: none;
-
-  .cursor {
-    display: none;
-  }
-
-  .btn-main:hover {
-    pointer-events: none;
-  }
 }
 
-@media (max-width: 600px) {
+.btn-main:hover {
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 600px) {
   .swiper-slide img {
     height: 450px;
     width: auto;
@@ -912,7 +1023,7 @@ input[type="radio"] {
   }
 }
 
-@media (max-width: 370px) {
+@media only screen and (max-width: 370px) {
   .swiper-slide img {
     height: 380px;
     width: auto;
