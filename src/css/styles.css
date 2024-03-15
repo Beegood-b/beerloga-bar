@@ -691,14 +691,17 @@ main {
           perspective: calc((1vw + 1vh) * 35);
 }
 
-.items-1,
+.items-1 {
+  margin: 3rem 1rem 3rem 1rem;
+}
+
 .items-2 {
   margin: 3rem 1rem 2rem 1rem;
 }
 
 .item {
   width: calc((1vw + 1vh) * 4);
-  height: calc((1vw + 1vh) * 16);
+  height: calc((1vw + 1vh) * 13);
   background-color: #fff;
   background-size: cover;
   background-position: center;
@@ -869,6 +872,9 @@ main {
 
 iframe {
   border-radius: 20px;
+  width: 100vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .accordion {
@@ -1171,8 +1177,12 @@ input[type=radio] {
     height: 450px;
     width: auto;
     border-radius: 15px;
-    -webkit-box-shadow: -1px 1px 15px #957d4f;
-            box-shadow: -1px 1px 15px #957d4f;
+    -webkit-box-shadow: -1px 1px 10px #957d4f;
+            box-shadow: -1px 1px 10px #957d4f;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
   }
 }
 @media only screen and (max-width: 370px) {

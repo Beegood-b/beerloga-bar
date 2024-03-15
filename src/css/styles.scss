@@ -587,14 +587,17 @@ main {
   perspective: calc($index * 35);
 }
 
-.items-1,
+.items-1 {
+  margin: 3rem 1rem 3rem 1rem;
+}
+
 .items-2 {
   margin: 3rem 1rem 2rem 1rem;
 }
 
 .item {
   width: calc($index * 4);
-  height: calc($index * 16);
+  height: calc($index * 13);
   background-color: #fff;
   background-size: cover;
   background-position: center;
@@ -738,6 +741,8 @@ main {
 
 iframe {
   border-radius: 20px;
+  width: 100vw;
+  box-sizing: border-box;
 }
 
 // ==================== ACCORDION ====================
@@ -998,7 +1003,12 @@ input[type="radio"] {
     height: 450px;
     width: auto;
     border-radius: 15px;
-    box-shadow: -1px 1px 15px $text-color;
+    box-shadow: -1px 1px 10px $text-color;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
   }
 }
 
