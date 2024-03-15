@@ -21,7 +21,7 @@ export const swiper2 = new Swiper(".mySwiper2", {
   centeredSlides: true,
   slidesPerView: 1,
   autoplay: {
-    delay: 122000,
+    delay: 4000,
     disableOnInteraction: false,
   },
   pagination: {

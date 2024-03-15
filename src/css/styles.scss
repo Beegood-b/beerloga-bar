@@ -46,7 +46,6 @@ main {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
 // ==================== SCROLLBAR ====================
@@ -231,7 +230,6 @@ main {
 .dropdown {
   width: 4rem;
   position: relative;
-  margin-bottom: 1rem;
 
   span.selected {
     display: flex;
@@ -307,7 +305,7 @@ main {
 // ==================== OTHER ====================
 
 .main {
-  flex: 1 0 auto;
+  flex: 1 1 auto;
 }
 
 .open {
@@ -866,7 +864,6 @@ input[type="radio"] {
 .footer {
   margin-top: auto;
   text-align: center;
-  flex: 0 0 auto;
 
   h6 {
     text-align: center;
@@ -893,7 +890,7 @@ input[type="radio"] {
 
 // ==================== MEDIA ====================
 
-@media only screen and (max-device-width: 1366px) and (orientation: portrait) {
+@media only screen and (max-width: 1366px) {
 
   .items-1,
   .items-2 {
@@ -904,20 +901,6 @@ input[type="radio"] {
     display: block;
   }
 }
-
-@media only screen 
-  and (max-device-width: 1366px)
-  and (orientation: landscape) {
-
-    .items-1,
-    .items-2 {
-      display: none;
-    }
-  
-    .swiper {
-      display: block;
-    }
-  }
 
 @media only screen and (max-width: 992px) {
   .burger {
@@ -959,6 +942,10 @@ input[type="radio"] {
     top: -140px;
     row-gap: 0 !important;
     padding-top: 0 !important;
+  }
+
+  .dropdown {
+    margin-bottom: 1rem;
   }
 
   .accordion span:hover {
@@ -1004,14 +991,6 @@ input[type="radio"] {
     opacity: 1;
     transform: translateY(0px) scale(1);
   }
-}
-
-.cursor {
-  display: none;
-}
-
-.btn-main:hover {
-  pointer-events: none;
 }
 
 @media only screen and (max-width: 600px) {
