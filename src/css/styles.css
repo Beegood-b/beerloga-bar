@@ -689,6 +689,8 @@ main {
   gap: 0.5rem;
   -webkit-perspective: calc((1vw + 1vh) * 35);
           perspective: calc((1vw + 1vh) * 35);
+  -webkit-animation: fade-up 1s 0.5s backwards;
+          animation: fade-up 1s 0.5s backwards;
 }
 
 .items-1 {

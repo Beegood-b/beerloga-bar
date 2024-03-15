@@ -585,6 +585,7 @@ main {
   display: flex;
   gap: 0.5rem;
   perspective: calc($index * 35);
+  animation: fade-up 1s 0.5s backwards;
 }
 
 .items-1 {
