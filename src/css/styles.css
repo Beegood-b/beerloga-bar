@@ -708,12 +708,12 @@ main {
   background-size: cover;
   background-position: center;
   cursor: pointer;
-  -webkit-filter: grayscale(100%) brightness(0.8);
-          filter: grayscale(100%) brightness(0.8);
-  -webkit-transition: width 1.25s cubic-bezier(0.1, 0.3, 0, 1), -webkit-transform 1.25s cubic-bezier(0.1, 0.3, 0, 1), -webkit-filter 2s cubic-bezier(0.1, 0.3, 0, 1);
-  transition: width 1.25s cubic-bezier(0.1, 0.3, 0, 1), -webkit-transform 1.25s cubic-bezier(0.1, 0.3, 0, 1), -webkit-filter 2s cubic-bezier(0.1, 0.3, 0, 1);
-  transition: transform 1.25s cubic-bezier(0.1, 0.3, 0, 1), filter 2s cubic-bezier(0.1, 0.3, 0, 1), width 1.25s cubic-bezier(0.1, 0.3, 0, 1);
-  transition: transform 1.25s cubic-bezier(0.1, 0.3, 0, 1), filter 2s cubic-bezier(0.1, 0.3, 0, 1), width 1.25s cubic-bezier(0.1, 0.3, 0, 1), -webkit-transform 1.25s cubic-bezier(0.1, 0.3, 0, 1), -webkit-filter 2s cubic-bezier(0.1, 0.3, 0, 1);
+  -webkit-filter: grayscale(100%) brightness(0.9);
+          filter: grayscale(100%) brightness(0.9);
+  -webkit-transition: width 1.25s cubic-bezier(0.1, 0.4, 0, 1), -webkit-transform 1.25s cubic-bezier(0.1, 0.4, 0, 1), -webkit-filter 2s cubic-bezier(0.1, 0.4, 0, 1);
+  transition: width 1.25s cubic-bezier(0.1, 0.4, 0, 1), -webkit-transform 1.25s cubic-bezier(0.1, 0.4, 0, 1), -webkit-filter 2s cubic-bezier(0.1, 0.4, 0, 1);
+  transition: transform 1.25s cubic-bezier(0.1, 0.4, 0, 1), filter 2s cubic-bezier(0.1, 0.4, 0, 1), width 1.25s cubic-bezier(0.1, 0.4, 0, 1);
+  transition: transform 1.25s cubic-bezier(0.1, 0.4, 0, 1), filter 2s cubic-bezier(0.1, 0.4, 0, 1), width 1.25s cubic-bezier(0.1, 0.4, 0, 1), -webkit-transform 1.25s cubic-bezier(0.1, 0.4, 0, 1), -webkit-filter 2s cubic-bezier(0.1, 0.4, 0, 1);
   will-change: transform, filter;
   -webkit-box-shadow: 0 0 5px #957d4f;
           box-shadow: 0 0 5px #957d4f;
@@ -874,7 +874,7 @@ main {
 
 iframe {
   border-radius: 20px;
-  width: 100vw;
+  width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -1181,6 +1181,12 @@ input[type=radio] {
     border-radius: 15px;
     -webkit-box-shadow: -1px 1px 10px #957d4f;
             box-shadow: -1px 1px 10px #957d4f;
+  }
+  iframe {
+    border-radius: 20px;
+    width: 100vw;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   .swiper-button-prev,
   .swiper-button-next {
