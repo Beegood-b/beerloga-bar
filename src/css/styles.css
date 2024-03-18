@@ -1,4 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@font-face {
+  font-display: swap;
+  font-family: "Alumni Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/alumni-sans-v18-cyrillic_cyrillic-ext_latin_latin-ext-regular.woff2") format("woff2");
+}
 body,
 html {
   height: 100vh;
@@ -61,7 +67,7 @@ main {
 
 .cursor {
   position: fixed;
-  border: 2px solid #fff;
+  border: 2px solid #faf9f6;
   border-radius: 50%;
   pointer-events: none;
   -webkit-box-shadow: 0 0 10px #957d4f;
@@ -270,6 +276,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
 }
 
 .select {
@@ -333,7 +340,6 @@ main {
   transition: 0.2s;
   z-index: 1;
 }
-
 .menu li {
   padding: 0.7rem 0.5rem;
   margin: 0.3rem 0;
@@ -349,10 +355,12 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-size: 16px;
+  color: #faf9f6;
 }
-
 .menu li:hover {
   background: #957d4f;
+  color: #0a0a0a;
 }
 
 .menu-open {
@@ -417,7 +425,7 @@ main {
 .heading h1 {
   position: relative;
   display: inline-block;
-  color: #fff;
+  color: #faf9f6;
   font-size: clamp(2.25rem, 2.0357rem + 1.0714vw, 3.75rem);
   text-transform: uppercase;
   -webkit-animation: fade-down 1s 1.3s backwards;
@@ -513,7 +521,7 @@ main {
 }
 
 .about-title h1 {
-  color: #fff;
+  color: #faf9f6;
   font-size: 60px;
   text-transform: uppercase;
   text-align: center;
@@ -577,7 +585,7 @@ main {
   text-align: center;
 }
 .bar-menu-title h1 {
-  color: #fff;
+  color: #faf9f6;
   font-size: 60px;
   text-transform: uppercase;
   text-align: center;
@@ -665,7 +673,7 @@ main {
   text-align: center;
 }
 .gallery-title h1 {
-  color: #fff;
+  color: #faf9f6;
   font-size: 60px;
   text-transform: uppercase;
   text-align: center;
@@ -704,7 +712,7 @@ main {
 .item {
   width: calc((1vw + 1vh) * 4);
   height: calc((1vw + 1vh) * 13);
-  background-color: #fff;
+  background-color: #faf9f6;
   background-size: cover;
   background-position: center;
   cursor: pointer;
@@ -719,70 +727,37 @@ main {
           box-shadow: 0 0 5px #957d4f;
   border-radius: 10px;
 }
-
-.item::before,
-.item::after {
+.item::before, .item::after {
   content: "";
   position: absolute;
   height: 100%;
   width: 20px;
   right: calc((1vw + 1vh) * -1);
 }
-
 .item::after {
   left: calc((1vw + 1vh) * -1);
 }
-
-.items-1 .item:hover {
+.item:hover {
   -webkit-filter: inherit;
           filter: inherit;
   -webkit-transform: translateZ(calc((1vw + 1vh) * 12));
           transform: translateZ(calc((1vw + 1vh) * 12));
   z-index: 1;
 }
-
-.items-1 .item:hover + * {
+.item:hover + * {
   -webkit-filter: inherit;
           filter: inherit;
   -webkit-transform: translateZ(calc((1vw + 1vh) * 10)) rotateY(30deg);
           transform: translateZ(calc((1vw + 1vh) * 10)) rotateY(30deg);
   z-index: 2;
 }
-
-.items-1 .item:has(+ :hover) {
+.item:has(+ :hover) {
   -webkit-filter: inherit;
           filter: inherit;
   -webkit-transform: translateZ(calc((1vw + 1vh) * 10)) rotateY(-30deg);
           transform: translateZ(calc((1vw + 1vh) * 10)) rotateY(-30deg);
 }
-
-.items-2 .item:hover {
-  -webkit-filter: inherit;
-          filter: inherit;
-  -webkit-transform: translateZ(calc((1vw + 1vh) * 12));
-          transform: translateZ(calc((1vw + 1vh) * 12));
-  z-index: 1;
-}
-
-.items-2 .item:hover + * {
-  -webkit-filter: inherit;
-          filter: inherit;
-  -webkit-transform: translateZ(calc((1vw + 1vh) * 10)) rotateY(30deg);
-          transform: translateZ(calc((1vw + 1vh) * 10)) rotateY(30deg);
-  z-index: 2;
-}
-
-.items-2 .item:has(+ :hover) {
-  -webkit-filter: inherit;
-          filter: inherit;
-  -webkit-transform: translateZ(calc((1vw + 1vh) * 10)) rotateY(-30deg);
-          transform: translateZ(calc((1vw + 1vh) * 10)) rotateY(-30deg);
-}
-
-.items-1 .item:active,
-.items-1 .item:focus,
-.items-2 .item:active,
-.items-2 .item:focus {
+.item.active, .item:focus {
   width: 16vw;
   -webkit-filter: inherit;
           filter: inherit;
@@ -814,7 +789,7 @@ main {
 .contact-title h1 {
   font-size: 60px;
   text-transform: uppercase;
-  color: #fff;
+  color: #faf9f6;
   -webkit-animation: fade-down 1s 0.5s backwards;
           animation: fade-down 1s 0.5s backwards;
 }
@@ -887,8 +862,8 @@ iframe {
   text-decoration: none;
   list-style: none;
   width: 100%;
-  margin: 1rem 0;
   color: #957d4f;
+  margin: 1rem 0;
 }
 .accordion li label {
   display: -webkit-box;
@@ -901,33 +876,31 @@ iframe {
   font-size: 25px;
   cursor: pointer;
 }
-.accordion label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.accordion li label:hover {
+  color: #faf9f6;
 }
-.accordion label:hover {
-  color: #fff;
-}
-.accordion label span {
+.accordion li label span {
   margin-left: auto;
   margin-right: auto;
 }
+.accordion li label i:first-child {
+  border: 2px solid #faf9f6;
+  margin-right: 1rem;
+}
 .accordion a {
   font-size: 25px;
-  color: #fff;
+  color: #faf9f6;
   text-decoration: none;
   padding: 1rem;
+  margin: 0.5rem 0;
   text-transform: uppercase;
 }
 .accordion p {
   font-size: 25px;
   padding: 1rem;
+  margin: 0.5rem 0;
   text-transform: uppercase;
-  color: #fff;
+  color: #faf9f6;
 }
 .accordion span {
   display: -webkit-box;
@@ -950,8 +923,20 @@ iframe {
   transition: all ease 0.3s;
 }
 .accordion i {
-  font-size: 15px;
-  padding-right: 1rem;
+  font-size: 12px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  padding: 0.2rem;
+  border-radius: 50%;
+  color: #faf9f6;
+  -webkit-box-shadow: 0 0 20px #957d4f;
+          box-shadow: 0 0 20px #957d4f;
+}
+
+.icon-rotate {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .accordion .contact-media i {
@@ -993,7 +978,7 @@ input[type=radio] {
 .accordion input[type=radio]:checked + label + .working-hours,
 .accordion input[type=radio]:checked + label + .social-media {
   max-height: 600px;
-  padding: 10px 0;
+  padding-top: 10px 0;
 }
 
 .accordion input[type=radio]:checked + label + .hours .menu {
@@ -1001,9 +986,10 @@ input[type=radio] {
 }
 
 .social-media i {
-  font-size: 25px;
+  font-size: 30px;
   padding: 0;
-  color: #fff;
+  color: #957d4f;
+  margin: 2rem 0.5rem 0 0.5rem;
 }
 
 .footer {
@@ -1021,7 +1007,7 @@ input[type=radio] {
   display: block;
   text-align: center;
   font-size: 14px;
-  color: #fff;
+  color: #faf9f6;
 }
 
 .footer-title {

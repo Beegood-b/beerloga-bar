@@ -1,12 +1,17 @@
 export function setupLanguageSwitcher() {
   const langSelect = document.getElementById("langSelect");
-  const allLangs = ["lv", "eng", "ru"];
+  const allLangs = ["lv", "en", "ru"];
   const currentPathName = window.location.pathname;
   let currentLang =
     localStorage.getItem("language") || checkBrowserLang() || "lv";
   let currentTexts = {};
 
   const mainPage = {
+    "head-title": {
+      en: "BEERloga • Home",
+      ru: "BEERloga • Главная",
+      lv: "BEERloga •  Sākums"
+    },
     "nav-home": {
       en: "home",
       ru: "главная",
@@ -35,6 +40,11 @@ export function setupLanguageSwitcher() {
   };
 
   const aboutPage = {
+    "head-title": {
+      en: "BEERloga • About Us",
+      ru: "BEERloga • О Нас",
+      lv: "BEERloga • Par Mums"
+    },
     "nav-home": {
       en: "home",
       ru: "главная",
@@ -86,6 +96,11 @@ BEERloga Bar ir vieta, kur jābūt!`,
   };
 
   const menuPage = {
+    "head-title": {
+      en: "BEERloga • Menu",
+      ru: "BEERloga • Меню",
+      lv: "BEERloga • Ēdienkarte"
+    },
     "nav-home": {
       en: "home",
       ru: "главная",
@@ -124,6 +139,11 @@ BEERloga Bar ir vieta, kur jābūt!`,
   };
 
   const galleryPage = {
+    "head-title": {
+      en: "BEERloga • Gallery",
+      ru: "BEERloga • Галерея",
+      lv: "BEERloga • Galerija"
+    },
     "nav-home": {
       en: "home",
       ru: "главная",
@@ -162,6 +182,11 @@ BEERloga Bar ir vieta, kur jābūt!`,
   };
 
   const contactPage = {
+    "head-title": {
+      en: "BEERloga • Contact",
+      ru: "BEERloga • Контакты",
+      lv: "BEERloga • Kontakti"
+    },
     "nav-home": {
       en: "home",
       ru: "главная",
@@ -217,19 +242,19 @@ BEERloga Bar ir vieta, kur jābūt!`,
   // checking the path of the website page
   function checkPagePathName() {
     switch (currentPathName) {
-      case "/index.html":
+      case "/index":
         currentTexts = mainPage;
         break;
-      case "/about.html":
+      case "/about":
         currentTexts = aboutPage;
         break;
-      case "/menu.html":
+      case "/menu":
         currentTexts = menuPage;
         break;
-      case "/gallery.html":
+      case "/gallery":
         currentTexts = galleryPage;
         break;
-      case "/contact.html":
+      case "/contact":
         currentTexts = contactPage;
         break;
 
@@ -242,29 +267,23 @@ BEERloga Bar ir vieta, kur jābūt!`,
 
   function updateSelectedOption() {
     const selectedElement = langSelect.querySelector('.selected');
-    selectedElement.textContent = ''; // clear any previous content
-
-    const img = document.createElement('img');
-    img.src = `./src/img/${currentLang}.png`;
-    img.width = 16;
-    img.alt = `${currentLang} flag`;
-    selectedElement.appendChild(img);
+    // update text content with lang code
+    selectedElement.textContent = currentLang.toUpperCase();
   }
 
   langSelect.addEventListener("click", (event) => {
     const clickedElement = event.target;
-
-    // if clicked element is an image, get its parent (LI element)
-    const listItem = clickedElement.tagName === "IMG" ? clickedElement.parentNode : clickedElement;
+    const listItem = clickedElement.tagName === "LI" ? clickedElement : clickedElement.parentNode;
 
     if (listItem.tagName === "LI") {
       const newLang = listItem.getAttribute("data-value");
 
-      if (newLang !== currentLang) {
+      if (newLang !== currentLang && allLangs.includes(newLang)) {
         currentLang = newLang;
         localStorage.setItem("language", currentLang);
         changeLang();
-        updateSelectedOption(); // update the selected language display after changing language
+        // update the selected lang display after changing lang
+        updateSelectedOption();
       }
     }
   });
@@ -273,6 +292,10 @@ BEERloga Bar ir vieta, kur jābūt!`,
 
   // changing lang of the texts
   function changeLang() {
+    //change title based on the selected lang
+    const headTitle = currentTexts["head-title"][currentLang];
+    document.title = headTitle;
+
     for (const key in currentTexts) {
       let elem = document.querySelector(`[data-lang=${key}]`);
       if (elem) {

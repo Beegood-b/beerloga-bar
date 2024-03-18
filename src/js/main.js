@@ -18,11 +18,11 @@ window.addEventListener("load", () => {
 
 // check if the device has touch capability
 function isTouchDevice() {
-  return 'ontouchstart' in window || navigator.maxTouchPoints;
+  return "ontouchstart" in window || navigator.maxTouchPoints;
 }
 
 if (!isTouchDevice()) {
-  // apply mouse effect only if it's not a touchscreen device
+  // apply mouse effect only if its not a touchscreen device
   document.addEventListener("mousemove", (e) => {
     const cursor = document.getElementById("cursor");
     const height = cursor.offsetHeight;
@@ -54,47 +54,47 @@ if (!isTouchDevice()) {
 }
 
 //dropdown menu
-const dropdowns = document.querySelectorAll('.dropdown');
+const dropdowns = document.querySelectorAll(".dropdown");
 
 //loop through all dropdown elem
-dropdowns.forEach(dropdown => {
+dropdowns.forEach((dropdown) => {
   //get inner elem for each dropdown
-  const select = dropdown.querySelector('.select');
-  const caret = dropdown.querySelector('.caret');
-  const menu = dropdown.querySelector('.menu');
-  const options = dropdown.querySelectorAll('.menu li');
-  const selected = dropdown.querySelector('.selected');
+  const select = dropdown.querySelector(".select");
+  const caret = dropdown.querySelector(".caret");
+  const menu = dropdown.querySelector(".menu");
+  const options = dropdown.querySelectorAll(".menu li");
+  const selected = dropdown.querySelector(".selected");
 
-  select.addEventListener('click', () => {
+  select.addEventListener("click", () => {
     //add the clicked select styles to the select elem
-    select.classList.toggle('select-clicked');
+    select.classList.toggle("select-clicked");
     // add the rotate styles to the caret elem
-    caret.classList.toggle('caret-rotate');
+    caret.classList.toggle("caret-rotate");
     //add the open styles to the menu elem
-    menu.classList.toggle('menu-open');
+    menu.classList.toggle("menu-open");
   });
 
-  const arr = Array.from(options)
+  const arr = Array.from(options);
 
   //loop through all option elements
-  arr.forEach(option => {
+  arr.forEach((option) => {
     //add a click event to the option elem
-    option.addEventListener('click', () => {
+    option.addEventListener("click", () => {
       //change selected inner text to clicked opt inner text
       selected.innerText = option.innerText;
       //add the clicked select styles to the select elem
-      select.classList.remove('select-clicked');
+      select.classList.remove("select-clicked");
       //add the rotate styles to the caret elem
-      caret.classList.remove('caret-rotate');
+      caret.classList.remove("caret-rotate");
       // add the open styles to the menu elem
-      menu.classList.remove('menu-open');
+      menu.classList.remove("menu-open");
       // remove active class from all option elems
-      options.forEach(option => {
-        option.classList.remove('active');
+      options.forEach((option) => {
+        option.classList.remove("active");
       });
 
       // add active class to clicked option elem
-      option.classList.add('active');
+      option.classList.add("active");
     });
   });
 });
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // check if the radio button is already checked
       const isChecked = this.checked;
 
-      // if the radio button is already checked and it's not the same as the last checked one, uncheck it
+      // if the radio button is already checked and its not the same as the last checked one, uncheck it
       if (isChecked && this !== lastChecked) {
         lastChecked = this;
       } else {
@@ -118,6 +118,15 @@ document.addEventListener("DOMContentLoaded", function () {
         lastChecked = null;
       }
     });
+  });
+});
+
+// icon rotate on click
+const labels = document.querySelectorAll(".accordion li label");
+labels.forEach((label) => {
+  label.addEventListener("click", () => {
+    const icon = label.querySelector("i");
+    icon.classList.toggle("icon-rotate");
   });
 });
 
