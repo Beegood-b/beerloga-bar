@@ -3,7 +3,7 @@ export function setupLanguageSwitcher() {
   const allLangs = ["lv", "en", "ru"];
   const currentPathName = window.location.pathname;
   let currentLang =
-    localStorage.getItem("language") || checkBrowserLang() || "lv";
+    localStorage.getItem("language") || "lv" || checkBrowserLang();
   let currentTexts = {};
 
   const mainPage = {

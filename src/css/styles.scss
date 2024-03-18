@@ -685,22 +685,6 @@ main {
   }
 }
 
-.get-directions {
-  animation: fade-up 1s 0.5s backwards;
-}
-
-.get-in-touch {
-  animation: fade-up 1s 0.5s backwards;
-}
-
-.working-hours {
-  animation: fade-up 1s 0.5s backwards;
-}
-
-.follow-us {
-  animation: fade-up 1s 0.5s backwards;
-}
-
 .contact-subtitle {
   display: flex;
   align-content: center;
@@ -735,6 +719,7 @@ iframe {
 .accordion {
   text-align: center;
   width: 650px;
+  animation: fade-up 1s 0.5s backwards;
 
   li {
     text-decoration: none;
@@ -750,18 +735,17 @@ iframe {
       font-size: 25px;
       cursor: pointer;
 
-      &:hover {
-        color: $white-color;
-      }
-
       span {
         margin-left: auto;
         margin-right: auto;
       }
 
       i:first-child {
-        border: 2px solid $white-color;
         margin-right: 1rem;
+        color: $accent-color;
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+        font-size: 12px;
+        transition: 0.5s ease;
       }
     }
   }
@@ -795,19 +779,10 @@ iframe {
       transition: all ease 0.3s;
     }
   }
-
-  i {
-    font-size: 12px;
-    transition: 0.5s ease;
-    padding: 0.2rem;
-    border-radius: 50%;
-    color: $white-color;
-    box-shadow: 0 0 20px $accent-color;
-  }
 }
 
 .icon-rotate {
-  transform: rotate(90deg);
+  transform: rotate(-45deg);
 }
 
 .accordion .contact-media i {
@@ -854,10 +829,12 @@ input[type="radio"] {
 }
 
 .social-media i {
-  font-size: 30px;
+  font-size: 25px;
   padding: 0;
-  color: $accent-color;
-  margin: 2rem 0.5rem 0 0.5rem;
+  color: $white-color;
+  box-shadow: 0 0 20px $accent-color;
+  border-radius: 50%;
+  margin: 2rem 0.5rem 1rem 0.5rem;
 }
 
 // ==================== FOOTER ====================
@@ -940,7 +917,7 @@ input[type="radio"] {
   .menu-open {
     display: block;
     opacity: 1;
-    top: -140px;
+    top: -150px;
     row-gap: 0 !important;
     padding-top: 0 !important;
   }

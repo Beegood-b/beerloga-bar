@@ -794,26 +794,6 @@ main {
           animation: fade-down 1s 0.5s backwards;
 }
 
-.get-directions {
-  -webkit-animation: fade-up 1s 0.5s backwards;
-          animation: fade-up 1s 0.5s backwards;
-}
-
-.get-in-touch {
-  -webkit-animation: fade-up 1s 0.5s backwards;
-          animation: fade-up 1s 0.5s backwards;
-}
-
-.working-hours {
-  -webkit-animation: fade-up 1s 0.5s backwards;
-          animation: fade-up 1s 0.5s backwards;
-}
-
-.follow-us {
-  -webkit-animation: fade-up 1s 0.5s backwards;
-          animation: fade-up 1s 0.5s backwards;
-}
-
 .contact-subtitle {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -857,6 +837,8 @@ iframe {
 .accordion {
   text-align: center;
   width: 650px;
+  -webkit-animation: fade-up 1s 0.5s backwards;
+          animation: fade-up 1s 0.5s backwards;
 }
 .accordion li {
   text-decoration: none;
@@ -876,16 +858,17 @@ iframe {
   font-size: 25px;
   cursor: pointer;
 }
-.accordion li label:hover {
-  color: #faf9f6;
-}
 .accordion li label span {
   margin-left: auto;
   margin-right: auto;
 }
 .accordion li label i:first-child {
-  border: 2px solid #faf9f6;
   margin-right: 1rem;
+  color: #957d4f;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 .accordion a {
   font-size: 25px;
@@ -922,21 +905,11 @@ iframe {
   -webkit-transition: all ease 0.3s;
   transition: all ease 0.3s;
 }
-.accordion i {
-  font-size: 12px;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-  padding: 0.2rem;
-  border-radius: 50%;
-  color: #faf9f6;
-  -webkit-box-shadow: 0 0 20px #957d4f;
-          box-shadow: 0 0 20px #957d4f;
-}
 
 .icon-rotate {
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .accordion .contact-media i {
@@ -986,10 +959,13 @@ input[type=radio] {
 }
 
 .social-media i {
-  font-size: 30px;
+  font-size: 25px;
   padding: 0;
-  color: #957d4f;
-  margin: 2rem 0.5rem 0 0.5rem;
+  color: #faf9f6;
+  -webkit-box-shadow: 0 0 20px #957d4f;
+          box-shadow: 0 0 20px #957d4f;
+  border-radius: 50%;
+  margin: 2rem 0.5rem 1rem 0.5rem;
 }
 
 .footer {
@@ -1077,7 +1053,7 @@ input[type=radio] {
   .menu-open {
     display: block;
     opacity: 1;
-    top: -140px;
+    top: -150px;
     row-gap: 0 !important;
     padding-top: 0 !important;
   }
