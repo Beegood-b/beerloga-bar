@@ -316,3 +316,4 @@ BEERloga Bar ir vieta, kur jābūt!`,
       return navLang;
     }
   }
+}
