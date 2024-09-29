@@ -556,20 +556,20 @@ BEERloga Bar ir vieta, kur jābūt!`,
 </p>`,
   };
 
-  const privacyTitleLang = document.querySelector(".privacy__heading");
-  const privacyDescLang = document.querySelector(".privacy__description");
-  if (location.pathname === "/privacy.html") {
-    privacyTitleLang.innerHTML = privacyTitle[currentLang];
-    privacyDescLang.innerHTML = privacyDescription[currentLang];
-  }
+  // const privacyTitleLang = document.querySelector(".privacy__heading");
+  // const privacyDescLang = document.querySelector(".privacy__description");
+  // if (location.pathname === "/privacy.html") {
+  //   privacyTitleLang.innerHTML = privacyTitle[currentLang];
+  //   privacyDescLang.innerHTML = privacyDescription[currentLang];
+  // }
 
-  langSelect.querySelectorAll(".menu li").forEach((item) => {
-    item.addEventListener("click", function () {
-      if (location.pathname === "/privacy.html") {
-        location.reload();
-      }
-    });
-  });
+  // langSelect.querySelectorAll(".menu li").forEach((item) => {
+  //   item.addEventListener("click", function () {
+  //     if (location.pathname === "/privacy.html") {
+  //       location.reload();
+  //     }
+  //   });
+  // });
 
   // checking the path of the website page
   function checkPagePathName() {
