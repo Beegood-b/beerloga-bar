@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="lv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BEERloga</title>
+    <meta
+      name="description"
+      content="Piesātiniet savu izsalkumu BEERloga!
+      Piedāvājam garšīgus burgerus un fantastisku alus izvēli.
+      Nāciet iekšā un ērti izbaudiet gardu maltīti,kas pilnībā apmierinās jūsu vēlmes."
+    />
+    <link rel="canonical" href="https://beerloga.lv" />
+    <!-- favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./public/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./public/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="194x194"
+      href="./public/favicon-194x194.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./public/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./public/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./public/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./public/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="./public/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#603cba" />
+    <meta name="msapplication-config" content="./public/browserconfig.xml" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <!-- open graph -->
+    <meta property="og:locale" content="lv_LV" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="BEERLOGA Bārs" />
+    <meta
+      property="og:description"
+      content="Piesātiniet savu izsalkumu BEERloga!
+  Piedāvājam garšīgus burgerus un fantastisku alus izvēli.
+  Nāciet iekšā un ērti izbaudiet gardu maltīti,kas pilnībā apmierinās jūsu vēlmes."
+    />
+    <meta property="og:url" content="https://beerloga.lv" />
+    <meta property="og:image" content="./public/apple-touch-icon.png" />
+    <meta
+      property="og:image:secure_url"
+      content="./public/apple-touch-icon.png"
+    />
+    <meta property="og:image:width" content="180" />
+    <meta property="og:image:height" content="180" />
+    <meta property="og:image:alt" content="BEERLOGA" />
+    <meta property="og:image:type" content="image/png" />
+    <!-- libs -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./src/css/styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="loader"></div>
+      <div id="cursor" class="cursor"></div>
+
+      <!-- header -->
+
+      <header class="header">
+        <div class="logo">
+          <a href="index.html"
+            ><img src="./src/img/logo-big.png" width="60" alt=""
+          /></a>
+        </div>
+        <nav class="nav">
+          <ul>
+            <a href="index.html">
+              <li data-lang="nav-home"></li>
+            </a>
+            <a href="about.html">
+              <li data-lang="nav-about"></li>
+            </a>
+            <a href="menu.html">
+              <li data-lang="nav-menu"></li>
+            </a>
+            <a href="gallery.html">
+              <li data-lang="nav-gallery"></li>
+            </a>
+            <a href="contact.html">
+              <li data-lang="nav-contact"></li>
+            </a>
+          </ul>
+
+          <!-- lang dropdown -->
+
+          <div id="langSelect" class="dropdown">
+            <div class="select">
+              <span class="selected"></span>
+              <div class="caret"></div>
+            </div>
+            <ul class="menu">
+              <li data-value="lv">
+                <img src="./src/img/lv.svg" alt="lv-flag" width="20" />
+              </li>
+              <li data-value="en">
+                <img src="./src/img/en.svg" alt="en-flag" width="20" />
+              </li>
+              <li data-value="ru">
+                <img src="./src/img/ru.svg" alt="ru-flag" width="20" />
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- burger -->
+
+        <div class="burger">
+          <span></span>
+        </div>
+      </header>
+
+      <!-- main -->
+
+      <main class="main">
+        <section class="privacy">
+          <div class="privacy__inner">
+            <div class="privacy__title">
+              <h1 class="privacy__heading">Sīkdatņu politika</h1>
+            </div>
+            <div class="privacy__description" data-lang="privacy-description">
+              <p><strong>1. Ievads</strong></p>
+              <p>
+                Mūsu vietne izmanto sīkdatnes, lai uzlabotu lietotāju pieredzi
+                un analizētu apmeklējumu datus. Šī politika izskaidro, kādas
+                sīkdatnes mēs izmantojam, kāpēc tās tiek izmantotas un kā jūs
+                varat pārvaldīt savu sīkdatņu iestatījumu.
+              </p>
+
+              <p><strong>2. Kas ir sīkdatnes?</strong></p>
+              <p>
+                Sīkdatnes ir mazas teksta datnes, ko jūsu pārlūkprogramma
+                saglabā jūsu ierīcē, kad apmeklējat mūsu vietni. Tās palīdz mums
+                atpazīt jūsu ierīci un sniegt personalizētāku pieredzi.
+              </p>
+
+              <p><strong>3. Sīkdatņu veidi, ko izmantojam</strong></p>
+              <p>Mēs izmantojam šādas sīkdatnes:</p>
+              <ul>
+                <li>
+                  <strong>Analītiskās sīkdatnes:</strong> Mēs izmantojam Google
+                  Analytics, lai analizētu, kā apmeklētāji izmanto mūsu vietni.
+                  Šīs sīkdatnes palīdz mums saprast, cik daudz cilvēku apmeklē
+                  mūsu vietni, kādas lapas tiek apmeklētas visbiežāk un cik ilgi
+                  apmeklētāji pavada mūsu vietnē.
+                </li>
+              </ul>
+
+              <p><strong>4. Kā mēs izmantojam informāciju?</strong></p>
+              <p>
+                Informācija, ko mēs iegūstam, izmantojot Google Analytics, tiek
+                izmantota, lai:
+              </p>
+              <ul>
+                <li>Uzlabotu mūsu vietnes darbību un lietošanas pieredzi</li>
+                <li>Analizētu apmeklētāju uzvedību un izvēles</li>
+              </ul>
+
+              <p><strong>5. Sīkdatņu pārvaldība</strong></p>
+              <p>
+                Jūs varat kontrolēt, kādas sīkdatnes tiek izmantotas jūsu
+                ierīcē, mainot pārlūkprogrammas iestatījumus. Vairums
+                pārlūkprogrammu ļauj jums:
+              </p>
+              <ul>
+                <li>Izvēlēties nepieņemt sīkdatnes</li>
+                <li>Izdzēst esošās sīkdatnes</li>
+                <li>Saņemt brīdinājumus pirms sīkdatņu pieņemšanas</li>
+              </ul>
+              <p>
+                Lūdzu, ņemiet vērā, ka, ja jūs nepieņemat sīkdatnes, daži mūsu
+                vietnes funkcionalitātes elementi var darboties nepareizi.
+              </p>
+
+              <p><strong>6. Jūsu piekrišana</strong></p>
+              <p>
+                Apmeklējot mūsu vietni, jūs piekrītat, ka mēs izmantojam
+                sīkdatnes saskaņā ar šo politiku. Ja jūs nevēlaties piekrist,
+                lūdzu, izslēdziet sīkdatņu lietošanu savā pārlūkprogrammā.
+              </p>
+
+              <p><strong>7. Izmaiņas politikā</strong></p>
+              <p>
+                Mēs paturam tiesības mainīt šo sīkdatņu politiku. Visas izmaiņas
+                tiks publicētas šajā lapā ar norādi par izmaiņu datumu.
+              </p>
+
+              <p><strong>8. Saziņa</strong></p>
+              <p>
+                Ja jums ir jautājumi par šo sīkdatņu politiku, lūdzu,
+                sazinieties ar mums, izmantojot mūsu kontaktinformāciju mūsu
+                vietnē.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- cookies -->
+
+      <div class="container">
+        <div class="cookies">
+          <div class="data text-center">
+            <p data-lang="cookies-description">
+              Informējam, ka <strong>BEERLOGA.LV</strong> tīmekļa vietnē tiek
+              izmantotas sīkdatnes (angļu val. "cookies"), lai uzlabotu
+              lietošanas pieredzi, nodrošinot tās darbību un funcionalitāti
+              u.tml. mērķiem. Noklikšķiniet uz "Akceptēt" lai apstiprinātu šo
+              izmantošanu.
+              <a href="privacy.html" class="cookies-more">Lasīt vairāk ... </a>
+            </p>
+          </div>
+
+          <div class="button-container">
+            <button id="acceptBtn" class="button" data-lang="cookies-accept">
+              OK
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer -->
+
+      <footer class="footer">
+        <div class="footer__inner">
+          <ul class="footer__menu-list">
+            <li class="footer__menu-item">
+              <span>&copy;2019 - 2024 BEERloga. All Rights Reserved</span>
+            </li>
+            <li class="footer__menu-item">
+              <a
+                class="footer__menu-link privacy-policy"
+                href="contact.html"
+                data-lang="footer-contact"
+                >Kontakti</a
+              >
+            </li>
+            <li class="footer__menu-item">
+              <a
+                class="footer__menu-link privacy-policy"
+                href="privacy.html"
+                data-lang="footer-cookies"
+                >Sīkdatņu politika</a
+              >
+            </li>
+            <li class="footer__menu-item">
+              <a
+                class="footer__menu-link ew"
+                href="https://easyweb.lv"
+                target="_blank"
+                >Developed with 🖤 by Easy Web</a
+              >
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="./src/js/main.js"></script>
+  </body>
+</html>

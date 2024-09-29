@@ -2,10 +2,21 @@ import { swiper1, swiper2 } from "./swipers.js";
 import { setupLanguageSwitcher } from "./lang.js";
 
 // burger menu
-document.querySelector(".burger").addEventListener("click", function () {
-  this.classList.toggle("active");
+const burger = document.querySelector(".burger");
+const nav = document.querySelector(".nav");
+
+burger.addEventListener("click", function () {
+  burger.classList.toggle("active");
   document.body.classList.toggle("no-scroll");
-  document.querySelector(".nav").classList.toggle("open");
+  nav.classList.toggle("open");
+});
+
+document.addEventListener("click", function (e) {
+  if (!burger.contains(e.target) && !nav.contains(e.target)) {
+    burger.classList.remove("active");
+    document.body.classList.remove("no-scroll");
+    nav.classList.remove("open");
+  }
 });
 
 // preloader
@@ -99,6 +110,34 @@ dropdowns.forEach((dropdown) => {
   });
 });
 
+// highlight images on the menu page
+const burgerMenu = document.querySelector(".burger-menu");
+const drinkMenu = document.querySelector(".drink-menu");
+
+if (burgerMenu) {
+  // Set initial state
+  burgerMenu.classList.add("highlighted");
+  drinkMenu.classList.add("dimmed");
+
+  burgerMenu.addEventListener("click", function () {
+    // Highlight burger menu and dim drink menu
+    this.classList.add("highlighted");
+    this.classList.remove("dimmed");
+    drinkMenu.classList.remove("highlighted");
+    drinkMenu.classList.add("dimmed");
+  });
+}
+
+if (drinkMenu) {
+  drinkMenu.addEventListener("click", function () {
+    // Highlight drink menu and dim burger menu
+    this.classList.add("highlighted");
+    this.classList.remove("dimmed");
+    burgerMenu.classList.remove("highlighted");
+    burgerMenu.classList.add("dimmed");
+  });
+}
+
 //radio button close contact page
 document.addEventListener("DOMContentLoaded", function () {
   const radioButtons = document.querySelectorAll('input[type="radio"]');
@@ -128,6 +167,34 @@ labels.forEach((label) => {
     const icon = label.querySelector("i");
     icon.classList.toggle("icon-rotate");
   });
+});
+
+// Cookies
+
+const cookieBox = document.querySelector(".cookies"),
+  buttons = document.querySelectorAll(".button");
+
+const executeCodes = () => {
+  //if cookie contains Alpha-construction it will be returned and below of this code will not run
+  if (document.cookie.includes("alpha-construction")) return;
+  cookieBox.classList.add("show");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      cookieBox.classList.remove("show");
+
+      //if button was accepted
+      if (button.id == "acceptBtn") {
+        //set cookies for 1 month.
+        document.cookie =
+          "cookieBy= alpha-construction; max-age=" + 60 * 60 * 24 * 30;
+      }
+    });
+  });
+};
+//executeCodes after the setTimeout
+window.addEventListener("load", () => {
+  setTimeout(executeCodes, 3000);
 });
 
 setupLanguageSwitcher();
