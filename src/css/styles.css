@@ -941,6 +941,9 @@ input[type=radio] {
     z-index: 50;
     overflow: hidden;
     padding: 50px 40px;
+    -webkit-backdrop-filter: blur(8px);
+    -moz-backdrop-filter: blur(8px);
+    -o-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     animation: burgerAnimation 0.5s;
   }
