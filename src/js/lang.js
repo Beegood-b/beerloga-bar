@@ -594,7 +594,7 @@ BEERloga Bar ir vieta, kur jābūt!`,
         break;
 
       default:
-        currentTexts = mainPage;
+        currentTexts = cookiePage;
         break;
     }
   }
