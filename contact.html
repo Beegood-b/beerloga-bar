@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="lv">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-LZET532NRB"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-LZET532NRB");
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BEERloga</title>
@@ -102,27 +116,40 @@
 
       <header class="header">
         <div class="logo">
-          <a href="index.html"
-            ><img src="./src/img/logo-big.png" width="60" alt=""
+          <a href="/index.html"
+            ><img src="./src/img/logo-big.png" width="60" alt="logo"
           /></a>
         </div>
         <nav class="nav">
-          <ul>
-            <a href="index.html">
-              <li data-lang="nav-home"></li>
-            </a>
-            <a href="about.html">
-              <li data-lang="nav-about"></li>
-            </a>
-            <a href="menu.html">
-              <li data-lang="nav-menu"></li>
-            </a>
-            <a href="gallery.html">
-              <li data-lang="nav-gallery"></li>
-            </a>
-            <a href="contact.html">
-              <li class="focused" data-lang="nav-contact"></li>
-            </a>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a
+                href="index.html"
+                class="nav__link"
+                data-lang="nav-home"
+                >Sākums</a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="/about.html" class="nav__link" data-lang="nav-about"
+                >Par mums</a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="/menu.html" class="nav__link" data-lang="nav-menu"
+                >Ēdienkarte</a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="/gallery.html" class="nav__link" data-lang="nav-gallery"
+                >Galerija</a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="/contact.html" class="nav__link focused" data-lang="nav-contact"
+                >Kontakti</a
+              >
+            </li>
           </ul>
 
           <!-- lang dropdown -->
@@ -158,10 +185,10 @@
       <main class="contact">
         <section class="contact-section">
           <div class="contact-title">
-            <h1 data-lang="contact-heading"></h1>
+            <h1 data-lang="contact-heading">Kontakti</h1>
           </div>
           <div class="contact-image">
-            <img src="./src/img/logo-big.png" width="50%" alt="" />
+            <img src="./src/img/logo-big.png" width="50" alt="logo" />
           </div>
 
           <!-- accordion -->
@@ -174,8 +201,9 @@
                 <label for="first"
                   ><span class="get-directions"
                     ><i class="fa-solid fa-plus"></i>
-                    <h4 data-lang="contact-directions"></h4> </span
-                ></label>
+                    <h4 data-lang="contact-directions">Kā nonākt</h4>
+                  </span></label
+                >
                 <div class="map">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4357.570289895153!2d24.211260156380664!3d56.901070773530826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eed38be59164eb%3A0x6eb7d4419118c4e8!2sAlus%20b%C4%81rs%20BEERloga!5e0!3m2!1sen!2slv!4v1708399123185!5m2!1sen!2slv"
@@ -195,8 +223,9 @@
                 <label for="third"
                   ><span class="follow-us"
                     ><i class="fa-solid fa-plus"></i>
-                    <h4 data-lang="contact-working-hours"></h4> </span
-                ></label>
+                    <h4 data-lang="contact-working-hours">Darba laiks</h4>
+                  </span></label
+                >
                 <div class="working-hours">
                   <p>II-IV: 18:00 - 00:00</p>
                   <p>V-VI: 20:00 - 02:00</p>
@@ -208,8 +237,9 @@
                 <label for="second"
                   ><span class="get-in-touch"
                     ><i class="fa-solid fa-plus"></i>
-                    <h4 data-lang="contact-get-in-touch"></h4> </span
-                ></label>
+                    <h4 data-lang="contact-get-in-touch">Sazinaties ar mums</h4>
+                  </span></label
+                >
                 <div class="number">
                   <a href="tel:+37126867504">+37126867504</a>
                   <a href="tel:+37122310118">+37122310118</a>
@@ -226,8 +256,9 @@
                 <label for="fourth"
                   ><span class="follow-us"
                     ><i class="fa-solid fa-plus"></i>
-                    <h4 data-lang="contact-follow"></h4> </span
-                ></label>
+                    <h4 class="follow-us data-lang="contact-follow">Sekot</h4>
+                  </span></label
+                >
                 <div class="social-media">
                   <a
                     href="https://www.instagram.com/beerlogariga/"
@@ -248,10 +279,10 @@
         <!-- button -->
 
         <div class="button animate__animated animate__fadeIn animate__delay-1s">
-          <a href="index.html">
-            <div class="btn-main">
+          <a href="/index.html">
+            <button class="btn-main" aria-label="next" type="button">
               <i class="fa-solid fa-chevron-up"></i>
-            </div>
+            </button>
           </a>
         </div>
       </main>
@@ -267,12 +298,18 @@
               lietošanas pieredzi, nodrošinot tās darbību un funcionalitāti
               u.tml. mērķiem. Noklikšķiniet uz "Akceptēt" lai apstiprinātu šo
               izmantošanu.
-              <a href="privacy.html" class="cookies-more">Lasīt vairāk ... </a>
+              <a href="/privacy.html" class="cookies-more">Lasīt vairāk ... </a>
             </p>
           </div>
 
           <div class="button-container">
-            <button id="acceptBtn" class="button" data-lang="cookies-accept">
+            <button
+              id="acceptBtn"
+              class="button"
+              data-lang="cookies-accept"
+              aria-label="next"
+              type="button"
+            >
               OK
             </button>
           </div>
@@ -289,24 +326,24 @@
             </li>
             <li class="footer__menu-item">
               <a
+                href="/contact.html"
                 class="footer__menu-link privacy-policy"
-                href="contact.html"
                 data-lang="footer-contact"
                 >Kontakti</a
               >
             </li>
             <li class="footer__menu-item">
               <a
+                href="/privacy.html"
                 class="footer__menu-link privacy-policy"
-                href="privacy.html"
                 data-lang="footer-cookies"
                 >Sīkdatņu politika</a
               >
             </li>
             <li class="footer__menu-item">
               <a
-                class="footer__menu-link ew"
                 href="https://easyweb.lv"
+                class="footer__menu-link ew"
                 target="_blank"
                 >Developed with 🖤 by Easy Web</a
               >

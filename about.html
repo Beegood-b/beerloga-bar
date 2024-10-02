@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="lv">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-LZET532NRB"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-LZET532NRB");
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BEERloga</title>
@@ -91,19 +105,40 @@
 
       <header class="header">
         <div class="logo">
-          <a href="index.html"
-            ><img src="./src/img/logo-big.png" width="60" alt="Logo"
+          <a href="/index.html"
+            ><img src="./src/img/logo-big.png" width="60" alt="logo"
           /></a>
         </div>
         <nav class="nav">
-          <ul>
-            <li><a href="index.html" data-lang="nav-home"></a></li>
-            <li>
-              <a href="about.html" class="focused" data-lang="nav-about"></a>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a
+                href="/index.html"
+                class="nav__link"
+                data-lang="nav-home"
+                >Sākums</a
+              >
             </li>
-            <li><a href="menu.html" data-lang="nav-menu"></a></li>
-            <li><a href="gallery.html" data-lang="nav-gallery"></a></li>
-            <li><a href="contact.html" data-lang="nav-contact"></a></li>
+            <li class="nav__item">
+              <a href="/about.html" class="nav__link focused" data-lang="nav-about"
+                >Par mums</a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="/menu.html" class="nav__link" data-lang="nav-menu"
+                >Ēdienkarte</a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="/gallery.html" class="nav__link" data-lang="nav-gallery"
+                >Galerija</a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="/contact.html" class="nav__link" data-lang="nav-contact"
+                >Kontakti</a
+              >
+            </li>
           </ul>
 
           <!-- lang dropdown -->
@@ -139,7 +174,7 @@
       <main class="about">
         <section class="about-section">
           <div class="about-title">
-            <h1 data-lang="about-heading"></h1>
+            <h1 data-lang="about-heading">Par mums</h1>
           </div>
           <div class="about-image">
             <img src="./src/img/logo-big.png" alt="About Us" />
@@ -155,10 +190,10 @@
         <!-- button -->
 
         <div class="button animate__animated animate__fadeIn animate__delay-1s">
-          <a href="menu.html">
-            <div class="btn-main">
+          <a href="/menu.html">
+            <button class="btn-main" aria-label="next" type="button">
               <i class="fa-solid fa-chevron-down"></i>
-            </div>
+            </button>
           </a>
         </div>
       </main>
@@ -174,12 +209,18 @@
               lietošanas pieredzi, nodrošinot tās darbību un funcionalitāti
               u.tml. mērķiem. Noklikšķiniet uz "Akceptēt" lai apstiprinātu šo
               izmantošanu.
-              <a href="privacy.html" class="cookies-more">Lasīt vairāk ... </a>
+              <a href="/privacy.html" class="cookies-more">Lasīt vairāk ... </a>
             </p>
           </div>
 
           <div class="button-container">
-            <button id="acceptBtn" class="button" data-lang="cookies-accept">
+            <button
+              id="acceptBtn"
+              class="button"
+              data-lang="cookies-accept"
+              aria-label="next"
+              type="button"
+            >
               OK
             </button>
           </div>
@@ -196,24 +237,24 @@
             </li>
             <li class="footer__menu-item">
               <a
+                href="/contact.html"
                 class="footer__menu-link privacy-policy"
-                href="contact.html"
                 data-lang="footer-contact"
                 >Kontakti</a
               >
             </li>
             <li class="footer__menu-item">
               <a
+                href="/privacy.html"
                 class="footer__menu-link privacy-policy"
-                href="privacy.html"
                 data-lang="footer-cookies"
                 >Sīkdatņu politika</a
               >
             </li>
             <li class="footer__menu-item">
               <a
-                class="footer__menu-link ew"
                 href="https://easyweb.lv"
+                class="footer__menu-link ew"
                 target="_blank"
                 >Developed with 🖤 by Easy Web</a
               >

@@ -166,6 +166,8 @@ labels.forEach((label) => {
   label.addEventListener("click", () => {
     const icon = label.querySelector("i");
     icon.classList.toggle("icon-rotate");
+    icon.classList.toggle("fa-plus");
+    icon.classList.toggle("fa-minus");
   });
 });
 
@@ -175,8 +177,8 @@ const cookieBox = document.querySelector(".cookies"),
   buttons = document.querySelectorAll(".button");
 
 const executeCodes = () => {
-  //if cookie contains Alpha-construction it will be returned and below of this code will not run
-  if (document.cookie.includes("alpha-construction")) return;
+  //if cookie contains Beerloga-bar it will be returned and below of this code will not run
+  if (document.cookie.includes("beerloga-bar")) return;
   cookieBox.classList.add("show");
 
   buttons.forEach((button) => {
@@ -187,7 +189,7 @@ const executeCodes = () => {
       if (button.id == "acceptBtn") {
         //set cookies for 1 month.
         document.cookie =
-          "cookieBy= alpha-construction; max-age=" + 60 * 60 * 24 * 30;
+          "cookieBy= beerloga-bar; max-age=" + 60 * 60 * 24 * 30;
       }
     });
   });

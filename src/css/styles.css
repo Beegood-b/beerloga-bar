@@ -19,6 +19,9 @@ body {
 
 button {
   font-family: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 *,
@@ -90,8 +93,8 @@ main {
 }
 .loader:after {
   content: "";
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   border: 3px solid rgba(40, 40, 40, 0.3);
   border-top-color: #957d4f;
   border-radius: 50%;
@@ -685,7 +688,7 @@ iframe {
   color: #957d4f;
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
   font-size: 12px;
-  transition: 0.5s ease;
+  transition: 0.5s;
 }
 .accordion a {
   font-size: 25px;
@@ -715,7 +718,7 @@ iframe {
 }
 
 .icon-rotate {
-  transform: rotate(-135deg);
+  transform: rotate(-180deg);
 }
 
 .accordion .contact-media i {
@@ -780,6 +783,7 @@ input[type=radio] {
   left: -50%;
   bottom: 20px;
   transform: translateX(-50%);
+  -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
   padding: 1rem 1.7rem 1.5rem;
   transition: all 0.3s ease;
@@ -814,20 +818,19 @@ input[type=radio] {
   justify-content: center;
 }
 .cookies .button-container .button {
-  border: none;
-  background-color: #957d4f;
+  background-color: #000;
   color: #fff;
   padding: 0.1rem;
   cursor: pointer;
   width: calc(50% - 10px);
   font-size: 14px;
   transition: 0.3s;
-  border: 1px solid #957d4f;
   padding-block: 3px;
+  border: 1px solid #957d4f;
 }
 .cookies .button-container .button:hover {
   background-color: #000;
-  border: 1px solid #957d4f;
+  border: 1px solid #fff;
 }
 
 .privacy {
@@ -851,7 +854,8 @@ input[type=radio] {
   color: #fff;
 }
 .privacy__description {
-  margin-block: 6rem;
+  margin-top: 6rem;
+  margin-bottom: 1.5rem;
   animation: fade-up 1s backwards 0.5s;
 }
 .privacy__description ul {
@@ -941,6 +945,7 @@ input[type=radio] {
     z-index: 50;
     overflow: hidden;
     padding: 50px 40px;
+    -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     animation: burgerAnimation 0.5s;
   }
